@@ -118,7 +118,7 @@ class App extends Component {
       searchTerm: value,
       // we set the hint text only when we have more than 2 characters
       // in our input, otherwise we make it an empty string
-      hintText: value.length > 2 ? `Hit enter to search ${value}` : ''
+      hintText: value.length > 2 ? `Hit enter to search ${value}` : value
     }));
   };
 
