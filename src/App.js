@@ -73,7 +73,8 @@ class App extends Component {
       // code here and handle it in the catch area
 
       if (!data.length) {
-        throw new Error(`Nothing found for ${searchTerm}`);
+        // if not, we throw an error to say nothing found
+        throw `Nothing found for ${searchTerm}`
       }
 
       // here we grab a random result from our images
@@ -97,9 +98,9 @@ class App extends Component {
     } catch (error) {
       this.setState((prevState, props) => ({
         ...prevState,
+        loading: false,
         hintText: error,
-        loading: false
-      }));
+      }))
     }
   };
 
